@@ -46,7 +46,7 @@ public class Catalog {
             return;
         }
         System.out.println("=== Catálogo completo ===");
-        for (Product p : productos) {
+        for (Product p : products) {
             p.displayDescription();
             System.out.println();
         }
