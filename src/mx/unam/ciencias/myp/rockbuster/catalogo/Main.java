@@ -1,8 +1,14 @@
 package mx.unam.ciencias.myp.rockbuster.catalogo;
+import java.util.Scanner;
+import mx.unam.ciencias.myp.rockbuster.catalogo.service.Catalog;
 
-import mx.unam.ciencias.myp.rockbuster.catalogo.Menu;
 
-public static void main (String args[]) {
-    Menu menu = new Menu();
-    menu.run();
+public class Main {
+    public static void main (String args[]) {
+        Catalog catalog = new Catalog();
+        Scanner sc = new Scanner(System.in);
+        Menu menu = new Menu(catalog, sc);
+        menu.run();
+    }
+    
 }

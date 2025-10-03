@@ -47,8 +47,18 @@ public class Menu {
     }
 
     public void listProducts() {
-        catalog.getProducts();
+        List<Product> list = catalog.getProducts();
+        if (list == null || list.isEmpty()) {
+            System.out.println("No hay productos en el catálogo.");
+            return;
+        }
+        System.out.println("\n--- LISTA DE PRODUCTOS ---");
+        for (Product p : list) {
+            p.displayDescription();
+            System.out.println();
+        }
     }
+    
 
     /** Filtra productos por género (case-insensitive, parcial) y devuelve la lista. */
     public List<Product> filterGenre(String genre) {
@@ -113,7 +123,7 @@ public class Menu {
     private void addAlbumInteractive() {
         System.out.print("Nombre del Album: ");
         String nombre = scanner.nextLine().trim();
-        if (nombre.isEmpty()) { System.out.println("Nombre vacío. Cancelado.\n No puedes addProduct nombres vacíos."); return; }}
+        if (nombre.isEmpty()) { System.out.println("Nombre vacío. Cancelado.\n No puedes addProduct nombres vacíos."); return; }
         System.out.print("Artista: ");
         String artista = scanner.nextLine().trim();
 
@@ -140,10 +150,7 @@ public class Menu {
         System.out.print("Género de la saga: ");
         String genero = scanner.nextLine().trim();
 
-        System.out.print("Factor de descuento (ej: 0.9 para 10% off): ");
-        double factor = safeReadDouble(0.9);
-
-        Saga saga = new Saga(nombre, genero, factor);
+        Saga saga = new Saga(nombre, genero);
 
         System.out.println("addProduct películas a la saga.");
         while (true) {
@@ -205,7 +212,7 @@ public class Menu {
         catalog.addProduct(new Movie("John Wick", "Chad Stahelski", 101, "Acción", "Venganza imparable", 55));
         catalog.addProduct(new Movie("Parasite", "Bong Joon-ho", 132, "Drama/Thriller", "Cruce de clases sociales", 45));
 
-        Saga lotr = new Saga("LOTR (Trilogía)", "Fantasía", 0.9);
+        Saga lotr = new Saga("LOTR (Trilogía)", "Fantasía");
         lotr.addProduct(new Movie("LOTR: Fellowship", "Peter Jackson", 178, "Fantasía", "Comienzo", 70));
         lotr.addProduct(new Movie("LOTR: Two Towers", "Peter Jackson", 179, "Fantasía", "Segunda parte", 70));
         catalog.addProduct(lotr);

@@ -46,7 +46,7 @@ public class AlbumAdapter implements Product{
     }
 
     @Override
-    public String displayDescription() {
+    public void displayDescription() {
         StringBuilder sb = new StringBuilder();
         sb.append("=== Details of the music album: ===\n");
         sb.append("Album: ").append(album.getName()).append("\n");
@@ -55,7 +55,7 @@ public class AlbumAdapter implements Product{
         sb.append("Year: ").append(album.getYear()).append("\n");
         sb.append("Selling price: $").append(album.getCost()).append("\n");
         sb.append("================================");
-        return sb.toString();
+        System.out.println(sb.toString());
     }
 
     public Album getAlbum() {
