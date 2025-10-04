@@ -205,7 +205,7 @@ public class Menu {
         remove(p);
     }
 
-    /** Llena el catálogo con productos de ejemplo (≥8). */
+    /** Llena el catálogo con productos de ejemplo. */
     private void seedExampleData() {
         catalog.addProduct(new Movie("Matrix", "Wachowskis", 136, "Ciencia ficción/Acción", "Realidad vs simulación", 50));
         catalog.addProduct(new Movie("Inception", "Nolan", 148, "Ciencia ficción/Thriller", "Sueños dentro de sueños", 60));

@@ -5,9 +5,9 @@ import mx.unam.ciencias.myp.rockbuster.catalogo.service.Catalog;
 
 public class Main {
     public static void main (String args[]) {
-        Catalog catalog = new Catalog();
+        Catalog catalogo = new Catalog();
         Scanner sc = new Scanner(System.in);
-        Menu menu = new Menu(catalog, sc);
+        Menu menu = new Menu(catalogo, sc);
         menu.run();
     }
     
