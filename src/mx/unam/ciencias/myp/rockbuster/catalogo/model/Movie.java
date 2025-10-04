@@ -94,12 +94,13 @@ public class Movie implements Product {
      * Displays all details of the movie in the console.
      */
     public void displayDescription() {
-        System.out.println("Movie: " + name);
-        System.out.println("Creator: " + creator);
-        System.out.println("Overview: " + overview);
-        System.out.println("Genre: " + genre);
-        System.out.println("Length: " + length + " minutes");
-        System.out.println("Cost: $" + cost);
+        System.out.println("\nPelicula: " + name);
+        System.out.println("Director: " + creator);
+        System.out.println("Resumen: " + overview);
+        System.out.println("Genero: " + genre);
+        System.out.println("Duracion: " + length + " minutos");
+        System.out.println("Precio: $" + cost);
+        System.out.println("================================");
     }
     
 }

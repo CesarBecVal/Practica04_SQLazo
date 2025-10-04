@@ -1,7 +1,6 @@
 package mx.unam.ciencias.myp.rockbuster.catalogo.model;
 
 import java.util.ArrayList;
-
 import java.util.List;
 
 /**
@@ -73,12 +72,13 @@ public class Saga implements Product {
      */
     public void displayDescription() {
 
-        System.out.println("Saga: " + name);
-        System.out.println("Genre: " + genre);
+        System.out.println("\nSaga: " + name);
+        System.out.println("Genero: " + genre);
 
-        System.out.println("Total length: " + getLength() + " minutes");
-        System.out.println("Total cost (with 5% discount): $" + getCost());
-        System.out.println("Includes:");
+        System.out.println("Duracion total: " + getLength() + " minutes");
+        System.out.println("Precio (5% de descuento): $" + getCost());
+        System.out.println("Incluye:");
+        System.out.println("================================");
 
         for (Product p : components) p.displayDescription();
     }
