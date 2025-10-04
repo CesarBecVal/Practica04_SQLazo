@@ -18,6 +18,7 @@ import mx.unam.ciencias.myp.rockbuster.catalogo.service.Catalog;
 /**
  * Class that implements an interactive menu for RockBuster catalog.
  * Allows listing products, filtering by genre or max cost, and viewing details.
+ * @author César
  */
 public class Menu {
     private final Catalog catalog;
