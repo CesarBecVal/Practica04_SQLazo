@@ -2,6 +2,24 @@ package mx.unam.ciencias.myp.rockbuster.catalogo.adapter;
 
 import mx.unam.ciencias.myp.rockbuster.catalogo.model.Product;
 
+/**
+ * The {@code AlbumAdapter} class adapts an {@link Album} object
+ * to the {@link Product} interface, allowing albums to be handled
+ * uniformly with other product types in the Rockbuster catalog.
+ * <p>
+ * This class follows the Adapter design pattern, serving as a bridge
+ * between the {@code Album} class and the {@code Product} interface.
+ * </p>
+ * 
+ * Example usage:
+ * <pre>
+ * Album album = new Album("Nevermind", "Nirvana", "Grunge", 1991, 15.99);
+ * Product product = new AlbumAdapter(album);
+ * product.displayDescription();
+ * </pre>
+ * 
+ * @author  Luis
+ */
 public class AlbumAdapter implements Product{
     private Album album;
 
