@@ -1,5 +1,6 @@
-FROM openjdk:17
+FROM openjdk:17-slim
 WORKDIR /app
 COPY src ./src
-RUN mkdir out && javac -d out $(ls src/**/*.java)
+RUN apt-get update && apt-get install -y findutils
+RUN mkdir out && javac -d out $(find src -name "*.java")
 CMD ["java", "-cp", "out", "mx.unam.ciencias.myp.rockbuster.catalogo.Main"]
