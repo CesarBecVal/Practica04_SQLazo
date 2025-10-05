@@ -170,7 +170,7 @@ public class Menu {
     public List<Product> filterMaxCost(double max) {
         List<Product> res = catalog.filterMaxCost(max);
         if (res.isEmpty()) {
-            System.out.println("\nNo se encontraron productos con precio <= " + max);
+            System.out.println("\nNo se encontraron productos con precio <= " + max + " :(");
         } else {
 
             res.sort((a,b) -> Double.compare(b.getCost(), a.getCost()));
@@ -337,11 +337,11 @@ public class Menu {
             System.out.println(" \\ \\_\\ \\_\\  \\ \\_____\\  \\ \\_____\\  \\ \\_\\ \\_\\  \\ \\_____\\  \\ \\_____\\  \\/\\_____\\    \\ \\_\\  \\ \\_____\\  \\ \\_\\ \\_\\ ");
             System.out.println("  \\/_/ /_/   \\/_____/   \\/_____/   \\/_/\\/_/   \\/_____/   \\/_____/   \\/_____/     \\/_/   \\/_____/   \\/_/ /_/ ");
             System.out.println("\n--- ROCKBUSTER MENU ---");
-            System.out.println("1) Listar productos");
+            System.out.println("1) Listar los productos");
             System.out.println("2) Filtrar por género");
             System.out.println("3) Filtrar por costo máximo");
             System.out.println("0) Salir");
-            System.out.print("Elige opción: ");
+            System.out.print("Elige una opción: ");
 
             String opt = scanner.nextLine().trim();
             switch (opt) {
@@ -414,6 +414,6 @@ public class Menu {
                 default: System.out.println("Opción inválida."); break;
             }
         }
-        System.out.println("Saliendo. ¡Hasta luego!");
+        System.out.println("Saliendo. ¡Hasta luego! :D");
     }
 }
