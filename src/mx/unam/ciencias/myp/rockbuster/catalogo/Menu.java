@@ -331,6 +331,11 @@ public class Menu {
         seedExampleData();
         boolean running = true;
         while (running) {
+            System.out.println(" ______     ______     ______     __  __     ______     __  __     ______     ______   ______     ______    ");
+            System.out.println("/\\  == \\   /\\  __ \\   /\\  ___\\   /\\ \\/ /    /\\  == \\   /\\ \\/\\ \\   /\\  ___\\   /\\__  _\\ /\\  ___\\   /\\  == \\   ");
+            System.out.println("\\ \\  __<   \\ \\ \\/\\ \\  \\ \\ \\____  \\ \\  _\"-.  \\ \\  __<   \\ \\ \\_\\ \\  \\ \\___  \\  \\/_/\\ \\/ \\ \\  __\\   \\ \\  __<   ");
+            System.out.println(" \\ \\_\\ \\_\\  \\ \\_____\\  \\ \\_____\\  \\ \\_\\ \\_\\  \\ \\_____\\  \\ \\_____\\  \\/\\_____\\    \\ \\_\\  \\ \\_____\\  \\ \\_\\ \\_\\ ");
+            System.out.println("  \\/_/ /_/   \\/_____/   \\/_____/   \\/_/\\/_/   \\/_____/   \\/_____/   \\/_____/     \\/_/   \\/_____/   \\/_/ /_/ ");
             System.out.println("\n--- ROCKBUSTER MENU ---");
             System.out.println("1) Listar productos");
             System.out.println("2) Filtrar por género");
